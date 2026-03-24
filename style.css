@@ -1,0 +1,257 @@
+/* --- Base Styles --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+:root {
+    --primary: #003366;
+    --secondary: #FFD700; /* Vibrant Gold */
+    --accent: #FF5733;
+    --light: #F8F9FA;
+    --dark: #001f3f;
+}
+
+body {
+    background-color: var(--light);
+    color: #333;
+    line-height: 1.6; /* Adjusted from 3.6 to 1.6 for readability */
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* --- BROAD & BOLD HEADER --- */
+header {
+    background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
+    color: white;
+    padding: 15px 0; /* Slightly reduced padding to balance the double-line logo */
+    border-bottom: 4px solid var(--secondary);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Updated Logo Section for Vertical Stack */
+.logo-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.1;
+}
+
+.logo span { color: var(--secondary); }
+
+.logo-contact {
+    font-size: 13px;
+    color: var(--secondary);
+    font-weight: 600;
+    margin-top: 5px;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 5px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-size: 15px;
+}
+
+.nav-links li a:hover, .nav-links li a.active {
+    background: var(--secondary);
+    color: var(--dark);
+}
+
+/* Mobile Responsive Header */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+    .nav-links {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .logo-contact {
+        justify-content: center;
+    }
+}
+
+/* --- BROAD & VIBRANT FOOTER --- */
+/* footer {
+    background: var(--dark);
+    color: white;
+    padding: 20px 0 20px 0;
+    margin-top: 60px;
+    border-top: 10px solid var(--primary);
+} */
+footer {
+        background: #001f3f; color: white; padding: 60px 0 30px 0;
+        border-top: 10px solid #003366; margin-top: 60px;
+    }
+    .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; }
+    .footer-brand h2 { color: #FFD700; font-size: 24px; margin-bottom: 15px; font-weight: 800; }
+    .footer-links h3 { font-size: 18px; border-left: 4px solid #FFD700; padding-left: 10px; margin-bottom: 20px; }
+    .footer-links ul { list-style: none; padding: 0; }
+    .footer-links li { margin-bottom: 10px; }
+    .footer-links a { color: #cbd5e0; text-decoration: none; transition: 0.3s; }
+    .footer-links a:hover { color: #FFD700; }
+
+    /* --- 4. RESPONSIVE --- */
+    @media (max-width: 768px) {
+        .navbar { flex-direction: column; text-align: center; }
+        .nav-links { margin-top: 15px; flex-wrap: wrap; justify-content: center; }
+        .logo-contact { justify-content: center; }
+    }
+/* ... remaining grid/gallery CSS from your snippet ... */
+
+/* --- Middle Portion Styling --- */
+.page-content {
+    margin: 60px auto; /* Adds top/bottom and side margins */
+    max-width: 1100px;
+    padding: 40px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.content-title {
+    font-size: 36px;
+    color: var(--dark);
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+    font-weight: 800;
+}
+
+.content-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 5px;
+    background: var(--secondary);
+    margin: 15px auto;
+    border-radius: 2px;
+}
+
+.feature-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.card {
+    padding: 30px;
+    border-left: 5px solid var(--primary);
+    background: #fbfbfb;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+    color: var(--primary);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.card p {
+    line-height: 1.8;
+    color: #555;
+}
+/* --- GALLERY GRID SYSTEM --- */
+.gallery-section {
+    padding: 60px 0;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+    gap: 20px; /* Space between images */
+    padding: 0 20px;
+}
+
+.gallery-item {
+    position: relative;
+    height: 250px; /* FIXED HEIGHT */
+    border-radius: 12px;
+    overflow: hidden; /* Important for the hover zoom effect */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border: 3px solid #fff;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This crops the image to fit the 250px height perfectly without stretching */
+    transition: transform 0.5s ease;
+    display: block;
+}
+
+/* --- HOVER EFFECTS --- */
+.gallery-item:hover {
+    transform: translateY(-5px); /* Lifts the card up */
+    border-color: #FFD700; /* Changes border to gold on hover */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1); /* Zooms into the photo */
+}
+
+/* Overlay text (Optional) */
+.gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(transparent, rgba(0, 31, 63, 0.8));
+    color: #FFD700;
+    font-weight: 700;
+    font-size: 14px;
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
