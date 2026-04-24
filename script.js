@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
             alert('Your inquiry has been sent successfully!');
-            contactForm.reset();
+            contactForm.reset(); 
         });
     }
 
