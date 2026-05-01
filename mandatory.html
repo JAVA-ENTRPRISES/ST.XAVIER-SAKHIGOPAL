@@ -11,45 +11,44 @@
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: #f8fafc; color: #333; }
         
         /* --- HEADER CSS (THE MISSING PART) --- */
-        header {
-            background: linear-gradient(135deg, #001f3f 0%, #003366 100%);
-            color: white;
-            padding: 20px 0;
-            border-bottom: 5px solid #FFD700;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        }
+       /* ===== HEADER FIX (MATCH ALL PAGES) ===== */
 
-        .container { max-width: 1200px; margin: auto; padding: 0 20px; }
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+        .logo-container {
+    display: flex;
+    flex-direction: row;  /* ✅ CORRECT */
+    align-items: center;
+}
 
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+.logo-img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
 
-        .logo-container { display: flex; flex-direction: column; }
+.logo {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+}
 
-        .logo {
-            font-size: 28px;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            line-height: 1.1;
-        }
+.logo span {
+    display: block;
+    font-size: 13px;
+    color: #FFD700;
+}
 
-        .logo span { color: #FFD700; }
-
-        .logo-contact {
-            font-size: 13px;
-            color: #FFD700;
-            font-weight: 600;
-            margin-top: 5px;
-            display: flex;
-            gap: 15px;
-        }
+.logo-contact {
+    font-size: 12px;
+    margin-top: 3px;
+    display: flex;
+    gap: 12px;
+    color: #ddd;
+}
 
         .nav-links { display: flex; list-style: none; gap: 10px; margin: 0; padding: 0; }
 
@@ -330,39 +329,38 @@
         </table>
       </div>
     </div>
-    <footer style="background: #001f3f; color: white; padding: 70px 0 30px 0; border-top: 12px solid #003366; margin-top: 60px;">
-        <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 px-6">
-            <div>
-                <h2 style="color: #FFD700; font-size: 26px; margin-bottom: 20px; font-weight: 800;">ST. XAVIER, SAKHIGOPAL</h2>
-                <p style="color: #cbd5e0; line-height: 1.8; font-size: 15px;">Empowering minds since 1995. We are committed to providing a holistic education that prepares students for global challenges.</p>
-                <div style="margin-top: 25px; display: flex; gap: 15px;">
-                    <div style="background: #003366; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%;">FB</div>
-                    <div style="background: #003366; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%;">TW</div>
-                    <div style="background: #003366; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%;">IG</div>
-                </div>
-            </div>
-            <div>
-                <h3 style="color: white; font-size: 20px; margin-bottom: 25px; border-left: 5px solid #FFD700; padding-left: 15px; font-weight: bold;">Quick Links</h3>
-                <ul style="list-style: none; padding: 0;">
-                    <li style="margin-bottom: 12px;"><a href="index.html" style="color: #cbd5e0; text-decoration: none;">› Home</a></li>
-                    <li style="margin-bottom: 12px;"><a href="facilities.html" style="color: #cbd5e0; text-decoration: none;">› Our Facilities</a></li>
-                    <li style="margin-bottom: 12px;"><a href="gallery.html" style="color: #cbd5e0; text-decoration: none;">› Photo Gallery</a></li>
-                    <li style="margin-bottom: 12px;"><a href="admissions.html" style="color: #cbd5e0; text-decoration: none;">› Admissions 2026</a></li>
-                    <li style="margin-bottom: 12px;"><a href="mandatory.html" style="color: #FFD700; text-decoration: none; font-weight: bold;">› Public Disclosure</a></li>
-                </ul>
-            </div>
-            <div>
-                <h3 style="color: white; font-size: 20px; margin-bottom: 25px; border-left: 5px solid #FFD700; padding-left: 15px; font-weight: bold;">Contact Info</h3>
-                <p style="color: #cbd5e0; margin-bottom: 10px;">📍 shakhigopal, puri, Odisha - 754225</p>
-                <p style="color: #cbd5e0; margin-bottom: 10px;">📧 info@stxaviershakhigopal.com</p>
-                <p style="color: #cbd5e0; margin-bottom: 10px;">📞 +91-9999999999</p>
-            </div>
+    <footer>
+    <div class="container footer-grid">
+
+        <div class="footer-brand">
+            <h2>ST. XAVIER'S HIGH SCHOOL</h2>
+            <p>Empowering children through quality education and holistic development since 1995.</p>
         </div>
-        <div style="text-align: center; margin-top: 50px; padding-top: 25px; border-top: 1px solid rgba(255,255,255,0.1); color: #718096; font-size: 14px;">
-            &copy; 2026 ST. XAVIER SCHOOL, SHAKHIGOPAL. All Rights Reserved.
+
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="facilities.html">Facilities</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="admissions.html">Admissions</a></li>
+                <li><a href="mandatory.html">Disclosure</a></li>
+            </ul>
         </div>
-    </footer>
-<script src="script.js"></script>
+
+        <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p>Shakhigopal, Puri, Odisha - 752014</p>
+            <p>Email: stxaviers.skgl@gmail.com</p>
+            <p>Phone: +91-9999999999</p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        &copy; 2026 ST. XAVIER'S HIGH SCHOOL, SAKHIGOPAL. All Rights Reserved.
+    </div>
+</footer><script src="script.js"></script>
 
 </body>
 </html>
