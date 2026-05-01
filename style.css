@@ -36,41 +36,62 @@ header {
     box-shadow: var(--shadow);
 }
 
+/* NAVBAR LAYOUT */
 .navbar {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    max-width: 1200px;
-    margin: auto;
-    padding: 0 20px;
+    align-items: center;
 }
 
-/* LOGO SIDE */
+/* LOGO SECTION */
 .logo-container {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    align-items: center;
+    gap: 12px;
 }
 
+.logo-img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+/* SCHOOL NAME */
 .logo {
-    font-size: 26px;
-    font-weight: 800;
-    letter-spacing: 1.5px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.2;
 }
 
 .logo span {
-    color: var(--secondary);
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
 }
 
+/* CONTACT */
 .logo-contact {
     font-size: 12px;
-    margin-top: 4px;
     display: flex;
-    gap: 12px;
-    color: #ffe066;
+    gap: 15px;
 }
 
 /* NAVIGATION */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+}
+
+.nav-links li a.active {
+    color: #D4AF37;
+}/* NAVIGATION */
 .nav-links {
     display: flex;
     align-items: center;
