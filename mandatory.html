@@ -7,18 +7,24 @@
     <script src="https://cdn.tailwindcss.com"></script>
    <style>
 /* ===== GLOBAL ===== */
+/* ===== HEADER ===== */
 header {
-    background: #123a5c;
-    padding: 4px 0; /* KEY FIX */
+    background: #0d3557; /* exact dark blue tone */
+    padding: 6px 0 4px;  /* top slightly more than bottom */
     border-bottom: 3px solid #FFD700;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
+/* CONTAINER ALIGNMENT */
 .navbar {
     display: flex;
     justify-content: space-between;
-    align-items: center; /* PERFECT CENTER */
+    align-items: center; /* perfect vertical alignment */
 }
 
+/* ===== LEFT (LOGO AREA) ===== */
 .logo-container {
     display: flex;
     align-items: center;
@@ -26,96 +32,165 @@ header {
 }
 
 .logo-img {
-    width: 45px;
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
 }
 
+/* SCHOOL NAME */
 .logo {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 700;
+    color: #ffffff;
     letter-spacing: 0.5px;
+    line-height: 1.1;
 }
 
-.sub-text {
-    color: #FFD700;
-    font-size: 12px; 
+/* SAKHIGOPAL TEXT */
+.logo span {
     display: block;
-    margin-top: -2px;
+    font-size: 13px;
+    color: #FFD700;
+    margin-top: -2px; /* pulls closer */
+    letter-spacing: 1px;
 }
 
+/* CONTACT LINE */
 .logo-contact {
-    font-size: 11px;
-    margin-top: 2px;
-    color: #ddd;
     display: flex;
-    gap: 12px;
+    gap: 14px;
+    font-size: 12px;
+    color: #dcdcdc;
+    margin-top: 2px;
 }
 
-/* NAV */
+/* ===== RIGHT NAV ===== */
 .nav-links {
     display: flex;
-    gap: 12px;
+    align-items: center;
+    gap: 16px; /* spacing between items */
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-.nav-links a {
-    color: white;
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-size: 14px;
+/* NAV LINKS */
+.nav-links li a {
     text-decoration: none;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 6px 16px;  /* pill size EXACT */
+    border-radius: 20px;
+    transition: 0.25s ease;
 }
 
-.nav-links a.active {
+/* ACTIVE / HOVER (YELLOW PILLS) */
+.nav-links li a.active,
+.nav-links li a:hover {
     background: #FFD700;
-    color: #123a5c;
-}
-   footer {
-    background: #123a5c;
-    color: white;
-    padding: 40px 0 20px;
-    border-top: 3px solid #FFD700;
+    color: #0d3557;
+}/* ===== FOOTER ===== */
+footer {
+    background: #0d3557; /* deep navy */
+    color: #ffffff;
+    padding: 50px 0 20px;
+    border-top: 4px solid #FFD700;
+    margin-top: 40px;
 }
 
+/* GRID LAYOUT */
 .footer-grid {
     display: grid;
     grid-template-columns: 1.5fr 1fr 1fr;
-    gap: 40px;
+    gap: 60px; /* more spacing like screenshot */
+    align-items: flex-start;
 }
 
+/* LEFT SECTION */
+.footer-brand h2 {
+    color: #FFD700;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.footer-brand p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #d6d6d6;
+    max-width: 350px;
+}
+
+/* SOCIAL LINKS */
+.footer-brand a {
+    color: #4da3ff;
+    font-size: 13px;
+    margin-right: 8px;
+    text-decoration: none;
+}
+
+.footer-brand a:hover {
+    text-decoration: underline;
+}
+
+/* SECTION HEADINGS */
 .footer-links h3,
 .footer-contact h3 {
-    border-left: 3px solid #FFD700;
-    padding-left: 8px;
     font-size: 16px;
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 12px;
 }
 
+/* Yellow vertical line */
+.footer-links h3::before,
+.footer-contact h3::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 3px;
+    height: 18px;
+    width: 3px;
+    background: #FFD700;
+}
+
+/* LINKS LIST */
 .footer-links ul {
     list-style: none;
     padding: 0;
-    font-size: 14px;
+    margin: 0;
 }
 
 .footer-links li {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
+.footer-links a {
+    color: #d6d6d6;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    color: #FFD700;
+}
+
+/* CONTACT TEXT */
 .footer-contact p {
     font-size: 14px;
-    margin: 6px 0;
+    color: #d6d6d6;
+    margin: 8px 0;
 }
 
+/* BOTTOM COPYRIGHT */
 .footer-bottom {
     text-align: center;
-    margin-top: 25px;
+    margin-top: 35px;
+    padding-top: 15px;
     font-size: 13px;
-    color: #bbb;
+    color: #b5b5b5;
     border-top: 1px solid rgba(255,255,255,0.1);
-    padding-top: 12px;
-}
-   
-   
-   
-   </style>
+}   </style>
   
 </head>
 <body>
@@ -125,19 +200,24 @@ header {
 
     <!-- LEFT -->
     <div class="logo-container">
-      <img src="LOGO.jpeg" class="logo-img">
+    
+    <!-- LOGO IMAGE -->
+    <img src="logo.png" alt="School Logo" class="logo-img">
 
-      <div>
-        <div class="logo">ST. XAVIER'S HIGH SCHOOL</div>
-        <span class="sub-text">SAKHIGOPAL</span>
+    <!-- TEXT PART -->
+    <div class="logo-text">
+        <div class="logo">
+            ST. XAVIER'S HIGH SCHOOL
+            <span>SAKHIGOPAL</span>
+        </div>
 
         <div class="logo-contact">
-          <span>📞 +91-9999999999</span>
-          <span>✉️ stxaviers.skgl@gmail.com</span>
+            <span>📞 +91-9999999999</span>
+            <span>✉️ stxaviers.skgl@gmail.com</span>
         </div>
-      </div>
     </div>
 
+</div>
     <!-- RIGHT -->
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
@@ -365,46 +445,50 @@ header {
       </div>
     </div>
    <footer>
+<footer>
   <div class="container footer-grid">
 
     <!-- LEFT -->
-    <div>
-            <div class="logo-container">
-      <img src="LOGO.jpeg" class="logo-img">
+    <div class="footer-brand">
+      <h2>St.Xavier School</h2>
+      <p>
+        Empowering children through quality education and holistic
+        development since 1995. We strive for excellence in every field.
+      </p>
 
-      <h2>ST. XAVIER'S HIGH SCHOOL</h2>
-      <p>Empowering children through quality education and holistic development since 1995.</p>
+      <a href="#">Fb</a>
+      <a href="#">Tw</a>
+      <a href="#">Insta</a>
+      <a href="#">In</a>
     </div>
 
-    <!-- CENTER -->
+    <!-- MIDDLE -->
     <div class="footer-links">
       <h3>Quick Links</h3>
-         <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="facilities.html">Facilities</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="admissions.html">Admissions</a></li>
-      <li><a class="mandatory.html" href="#">Mandatory Disclosure</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-
-
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Our Facilities</a></li>
+        <li><a href="#">Photo Gallery</a></li>
+        <li><a href="#">Admissions</a></li>
+        <li><a href="#">Public Disclosure</a></li>
+      </ul>
     </div>
 
     <!-- RIGHT -->
     <div class="footer-contact">
       <h3>Contact Us</h3>
-      <p>Shakhigopal, Puri, Odisha - 752014</p>
-      <p>Email: stxaviers.skgl@gmail.com</p>
+      <p>Shakhigopal,Puri, Odisha - 752050</p>
+      <p>Email: example@gmail.com</p>
       <p>Phone: +91-9999999999</p>
+      <p>Office: 0674-234567</p>
     </div>
 
   </div>
 
   <div class="footer-bottom">
-    © 2026 ST. XAVIER'S HIGH SCHOOL, SAKHIGOPAL. All Rights Reserved.
+    © 2026 ST. XAVIER SCHOOL, SHAKHIGOPAL. All Rights Reserved.
   </div>
-</footer>
+</footer></footer>
     <script src="script.js"></script>
 
 </body>
