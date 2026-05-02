@@ -21,31 +21,35 @@ body {
 }
 
 /* ===== HEADER ===== */
+/* Reduce header height */
 header {
-    background: linear-gradient(135deg, #001f3f, #003366);
-    color: white;
-    padding: 10px 0;
-    border-bottom: 4px solid #FFD700;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    padding: 5px 0;   /* was 10px */
 }
 
-/* NAVBAR */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* Tighten logo text */
+.logo {
+    font-size: 18px;
+    line-height: 1;   /* reduce vertical gap */
+    margin: 0;
 }
 
-/* LOGO SECTION */
+/* Remove extra spacing from span */
+.logo span {
+    font-size: 12px;
+    margin: 0;
+    line-height: 1;
+}
+
+/* Reduce gap between logo + contact */
+.logo-contact {
+    font-size: 11px;
+    margin-top: 2px;  /* was 3px */
+}
+
+/* Reduce logo container spacing */
 .logo-container {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.logo-img {
+    gap: 8px;  /* was 12px */
+}.logo-img {
     width: 50px;
     height: 50px;
     object-fit: contain;
