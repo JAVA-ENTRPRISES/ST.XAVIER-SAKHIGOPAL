@@ -6,155 +6,154 @@
     <title>Mandatory Disclosure | ST. XAVIER, SHAKHIGOPAL</title>
     <script src="https://cdn.tailwindcss.com"></script>
    <style>
-/* ===== GLOBAL ===== */
-/* ===== HEADER ===== */
-header {
-    background: #0d3557; /* exact dark blue tone */
-    padding: 6px 0 4px;  /* top slightly more than bottom */
-    border-bottom: 3px solid #FFD700;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+/*/* ===== GLOBAL ===== */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f4f6f9;
 }
 
-/* CONTAINER ALIGNMENT */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* ===== HEADER ===== */
+header {
+    background: #0d3557;
+    border-bottom: 4px solid #FFD700;
+}
+
+/* NAVBAR */
 .navbar {
     display: flex;
     justify-content: space-between;
-    align-items: center; /* perfect vertical alignment */
+    align-items: center;
+    padding: 8px 0;
 }
 
-/* ===== LEFT (LOGO AREA) ===== */
+/* LEFT SIDE */
 .logo-container {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
 }
 
 .logo-img {
-    width: 48px;
-    height: 48px;
-    object-fit: contain;
+    width: 50px;
+    height: 50px;
 }
 
 /* SCHOOL NAME */
-.logo {
-    font-size: 20px;
-    font-weight: 700;
-    color: #ffffff;
-    letter-spacing: 0.5px;
-    line-height: 1.1;
+.logo-text {
+    display: flex;
+    flex-direction: column;
 }
 
-/* SAKHIGOPAL TEXT */
-.logo span {
-    display: block;
-    font-size: 13px;
+.logo-text h1 {
+    margin: 0;
+    font-size: 20px;
+    color: #fff;
+    font-weight: 700;
+}
+
+.logo-text span {
+    font-size: 12px;
     color: #FFD700;
-    margin-top: -2px; /* pulls closer */
+    font-weight: 600;
     letter-spacing: 1px;
 }
 
-/* CONTACT LINE */
+/* CONTACT */
 .logo-contact {
-    display: flex;
-    gap: 14px;
     font-size: 12px;
-    color: #dcdcdc;
+    color: #ddd;
     margin-top: 2px;
+    display: flex;
+    gap: 15px;
 }
 
-/* ===== RIGHT NAV ===== */
+/* NAV LINKS */
 .nav-links {
-    display: flex;
-    align-items: center;
-    gap: 16px; /* spacing between items */
     list-style: none;
+    display: flex;
+    gap: 14px;
     margin: 0;
     padding: 0;
 }
 
-/* NAV LINKS */
 .nav-links li a {
     text-decoration: none;
-    color: #ffffff;
-    font-size: 14px;
+    color: #fff;
     font-weight: 600;
-    padding: 6px 16px;  /* pill size EXACT */
+    padding: 6px 16px;
     border-radius: 20px;
-    transition: 0.25s ease;
+    transition: 0.3s;
 }
 
-/* ACTIVE / HOVER (YELLOW PILLS) */
-.nav-links li a.active,
-.nav-links li a:hover {
+/* ACTIVE BUTTON */
+.nav-links li a.active {
     background: #FFD700;
     color: #0d3557;
-}/* ===== FOOTER ===== */
+}
+
+/* ===== FOOTER ===== */
 footer {
-    background: #0d3557; /* deep navy */
-    color: #ffffff;
-    padding: 50px 0 20px;
+    background: #0d3557;
+    color: white;
     border-top: 4px solid #FFD700;
     margin-top: 40px;
 }
 
-/* GRID LAYOUT */
+/* FOOTER CONTENT */
 .footer-grid {
     display: grid;
     grid-template-columns: 1.5fr 1fr 1fr;
-    gap: 60px; /* more spacing like screenshot */
-    align-items: flex-start;
+    gap: 50px;
+    padding: 40px 0;
 }
 
-/* LEFT SECTION */
+/* LEFT */
 .footer-brand h2 {
     color: #FFD700;
-    font-size: 22px;
     margin-bottom: 10px;
 }
 
 .footer-brand p {
     font-size: 14px;
     line-height: 1.6;
-    color: #d6d6d6;
-    max-width: 350px;
+    color: #dcdcdc;
 }
 
-/* SOCIAL LINKS */
+/* SOCIAL */
 .footer-brand a {
-    color: #4da3ff;
+    color: #66aaff;
     font-size: 13px;
     margin-right: 8px;
-    text-decoration: none;
 }
 
-.footer-brand a:hover {
-    text-decoration: underline;
-}
-
-/* SECTION HEADINGS */
+/* HEADINGS */
 .footer-links h3,
 .footer-contact h3 {
     font-size: 16px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     position: relative;
-    padding-left: 12px;
 }
 
-/* Yellow vertical line */
+/* YELLOW LINE */
 .footer-links h3::before,
 .footer-contact h3::before {
     content: "";
     position: absolute;
-    left: 0;
-    top: 3px;
-    height: 18px;
+    left: -10px;
+    top: 4px;
     width: 3px;
+    height: 18px;
     background: #FFD700;
 }
 
-/* LINKS LIST */
+/* LINKS */
 .footer-links ul {
     list-style: none;
     padding: 0;
@@ -162,35 +161,24 @@ footer {
 }
 
 .footer-links li {
-    margin-bottom: 10px;
-}
-
-.footer-links a {
-    color: #d6d6d6;
-    text-decoration: none;
+    margin-bottom: 8px;
     font-size: 14px;
 }
 
-.footer-links a:hover {
-    color: #FFD700;
-}
-
-/* CONTACT TEXT */
+/* CONTACT */
 .footer-contact p {
+    margin: 6px 0;
     font-size: 14px;
-    color: #d6d6d6;
-    margin: 8px 0;
 }
 
-/* BOTTOM COPYRIGHT */
+/* BOTTOM */
 .footer-bottom {
     text-align: center;
-    margin-top: 35px;
-    padding-top: 15px;
+    padding: 15px 0;
     font-size: 13px;
-    color: #b5b5b5;
+    color: #aaa;
     border-top: 1px solid rgba(255,255,255,0.1);
-}   </style>
+}  </style>
   
 </head>
 <body>
