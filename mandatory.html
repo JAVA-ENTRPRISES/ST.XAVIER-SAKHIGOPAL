@@ -6,8 +6,6 @@
     <title>Mandatory Disclosure | ST. XAVIER, SHAKHIGOPAL</title>
     <script src="https://cdn.tailwindcss.com"></script>
    <style>
-
-/* ===== GLOBAL ===== */
 /* ===== GLOBAL ===== */
 body {
     font-family: 'Segoe UI', sans-serif;
@@ -23,10 +21,10 @@ body {
 
 /* ===== HEADER ===== */
 header {
-    background: linear-gradient(135deg, #001f3f, #003366);
+    background: linear-gradient(135deg, #0b2c4d, #0d3a63);
     color: white;
-    padding: 5px 0; /* reduced */
-    border-bottom: 4px solid #FFD700;
+    padding: 6px 0; /* tight like screenshot */
+    border-bottom: 3px solid #FFD700;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -43,44 +41,44 @@ header {
 .logo-container {
     display: flex;
     align-items: center;
-    gap: 8px; /* reduced */
+    gap: 10px;
 }
 
 .logo-img {
-    width: 45px;  /* slightly reduced */
-    height: 45px;
+    width: 48px;
+    height: 48px;
     object-fit: contain;
 }
 
-/* TEXT */
+/* SCHOOL NAME */
 .logo {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 700;
-    line-height: 1; /* tighter */
-    margin: 0;
+    letter-spacing: 0.5px;
+    line-height: 1.1;
 }
 
 .logo span {
     display: block;
-    font-size: 12px;
+    font-size: 13px;
     color: #FFD700;
-    margin: 0;
-    line-height: 1;
+    letter-spacing: 1px;
 }
 
+/* CONTACT BELOW NAME */
 .logo-contact {
-    font-size: 11px;
-    margin-top: 2px; /* reduced */
+    font-size: 12px;
+    margin-top: 2px;
     display: flex;
-    gap: 10px;
-    color: #ddd;
+    gap: 15px;
+    color: #dcdcdc;
 }
 
 /* NAV LINKS */
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 12px; /* slightly reduced */
+    gap: 14px;
     margin: 0;
     padding: 0;
 }
@@ -89,41 +87,55 @@ header {
     text-decoration: none;
     color: white;
     font-weight: 600;
-    padding: 5px 10px; /* reduced */
+    padding: 6px 14px;
     border-radius: 20px;
     transition: 0.3s;
     font-size: 14px;
 }
 
-.nav-links li a:hover,
-.nav-links li a.active {
+/* ACTIVE (YELLOW BUTTON STYLE) */
+.nav-links li a.active,
+.nav-links li a:hover {
     background: #FFD700;
-    color: #001f3f;
+    color: #0b2c4d;
 }
 
 /* ===== FOOTER ===== */
 footer {
-    background: #001f3f;
+    background: #0b2c4d;
     color: white;
-    padding: 60px 0 30px;
-    margin-top: 60px;
-    border-top: 6px solid #FFD700;
+    padding: 50px 0 20px;
+    border-top: 4px solid #FFD700;
 }
 
+/* FOOTER GRID */
 .footer-grid {
     display: grid;
     grid-template-columns: 1.5fr 1fr 1fr;
     gap: 40px;
+    align-items: flex-start;
 }
 
+/* LEFT */
 .footer-brand h2 {
     color: #FFD700;
     margin-bottom: 10px;
+    font-size: 22px;
 }
 
+.footer-brand p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #d0d0d0;
+}
+
+/* LINKS */
 .footer-links h3,
 .footer-contact h3 {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
+    font-size: 16px;
+    border-left: 3px solid #FFD700;
+    padding-left: 8px;
 }
 
 .footer-links ul {
@@ -136,27 +148,44 @@ footer {
 }
 
 .footer-links a {
-    color: #ccc;
+    color: #cfcfcf;
     text-decoration: none;
+    font-size: 14px;
 }
 
 .footer-links a:hover {
     color: #FFD700;
 }
 
+/* CONTACT */
+.footer-contact p {
+    font-size: 14px;
+    margin: 6px 0;
+    color: #cfcfcf;
+}
+
+/* BOTTOM */
 .footer-bottom {
     text-align: center;
-    margin-top: 40px;
-    font-size: 14px;
+    margin-top: 30px;
+    font-size: 13px;
     color: #aaa;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 15px;
 }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
+
     .navbar {
         flex-direction: column;
-        gap: 8px;
+        gap: 10px;
         text-align: center;
+    }
+
+    .logo-contact {
+        justify-content: center;
+        flex-wrap: wrap;
     }
 
     .nav-links {
@@ -164,16 +193,17 @@ footer {
         justify-content: center;
     }
 
-    .logo-contact {
-        justify-content: center;
-    }
-
     .footer-grid {
         grid-template-columns: 1fr;
         text-align: center;
     }
-}
-</style>
+
+    .footer-links h3,
+    .footer-contact h3 {
+        border-left: none;
+        padding-left: 0;
+    }
+}</style>
   
 </head>
 <body>
